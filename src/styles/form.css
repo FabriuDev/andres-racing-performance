@@ -1,0 +1,251 @@
+/* ══════════════════════════════════════
+   FORMULARIO DE CONTACTO
+══════════════════════════════════════ */
+.form-section{
+  background:linear-gradient(160deg,#110008,var(--bg) 65%);
+  border-top:1px solid var(--border-p);
+  position:relative;overflow:hidden
+}
+.form-head{text-align:center;margin-bottom:52px}
+.form-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:56px;align-items:start}
+.form-grid .s-title{font-size:clamp(1.6rem,3vw,2.5rem)}
+.form-trust{display:flex;flex-direction:column;gap:10px;margin-top:28px}
+.form-trust-item{
+  display:flex;align-items:center;gap:12px;
+  font-size:.84rem;color:var(--silver)
+}
+.form-trust-icon{
+  width:34px;height:34px;background:var(--pink-dim);border:1px solid var(--border-p);
+  border-radius:9px;display:flex;align-items:center;justify-content:center;
+  font-size:.92rem;flex-shrink:0
+}
+
+.form-card{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--rl);
+  padding:32px;display:flex;flex-direction:column;gap:18px
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-field{display:flex;flex-direction:column;gap:5px}
+.form-field.ferr .form-input,
+.form-field.ferr .form-select{border-color:var(--pink)}
+.form-label{
+  font-size:.72rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.12em;color:var(--silver)
+}
+.form-req{color:var(--pink)}
+.form-input,.form-select,.form-textarea{
+  background:var(--black-soft);border:1px solid var(--border-soft);border-radius:var(--r);
+  color:var(--text-main);padding:11px 14px;font:inherit;font-size:.9rem;
+  transition:border-color .2s,box-shadow .2s;outline:none;width:100%
+}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--faint)}
+.form-input:focus,.form-select:focus,.form-textarea:focus{
+  border-color:var(--border-p);box-shadow:0 0 0 3px rgba(242,5,98,.07)
+}
+.form-select{
+  cursor:pointer;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23555' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center
+}
+.form-select option{background:#181818}
+.form-textarea{resize:vertical;min-height:86px}
+.form-error{font-size:.73rem;color:var(--pink);font-weight:600}
+.form-radio-group{display:flex;gap:8px;flex-wrap:wrap}
+.form-radio{
+  display:flex;align-items:center;gap:6px;cursor:pointer;
+  padding:8px 16px;background:var(--black-soft);border:1px solid var(--border-soft);
+  border-radius:999px;font-size:.83rem;color:var(--muted);
+  transition:border-color .2s,color .2s,background .2s;user-select:none
+}
+.form-radio input{position:absolute;opacity:0;pointer-events:none}
+.form-radio.selected{border-color:var(--border-p);color:var(--pink);background:var(--pink-dim)}
+.form-submit{width:100%;justify-content:center;margin-top:4px}
+.form-privacy{font-size:.7rem;color:var(--faint);text-align:center;line-height:1.5}
+
+.form-wa-alt{margin-top:36px;padding-top:28px;border-top:1px solid var(--border)}
+.form-wa-alt-label{font-size:.76rem;color:var(--muted);margin-bottom:12px;font-weight:600;text-transform:uppercase;letter-spacing:.1em}
+.btn-wa-full{
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  width:100%;padding:15px 20px;
+  background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.3);
+  color:var(--whatsapp);border-radius:var(--r);font-weight:700;font-size:.92rem;
+  transition:background .2s,transform .2s
+}
+.btn-wa-full:hover{background:rgba(34,197,94,.2);transform:translateY(-1px)}
+
+/* ══════════════════════════════════════
+   FORMULARIO PREMIUM v2
+══════════════════════════════════════ */
+.form-bg-glow{
+  position:absolute;top:-280px;left:50%;transform:translateX(-50%);
+  width:min(1100px,100vw);height:min(1100px,100vw);border-radius:50%;
+  background:radial-gradient(circle,rgba(242,5,98,.07) 0%,transparent 60%);
+  pointer-events:none;z-index:0
+}
+.form-head-sub{
+  color:var(--muted);font-size:.93rem;line-height:1.75;margin-top:10px
+}
+
+/* ── Layout ── */
+.form-layout{
+  display:grid;grid-template-columns:1fr 1.65fr;gap:60px;align-items:start
+}
+
+/* ── Info panel (left) ── */
+.form-info{position:sticky;top:100px}
+
+/* Direct WhatsApp button */
+.form-wa-direct{
+  display:flex;align-items:center;gap:14px;
+  padding:18px 20px;margin-bottom:24px;
+  background:linear-gradient(135deg,rgba(37,211,102,.12) 0%,rgba(37,211,102,.05) 100%);
+  border:1px solid rgba(37,211,102,.25);
+  border-radius:14px;
+  color:inherit;text-decoration:none;
+  transition:background .2s,border-color .2s,transform .18s
+}
+.form-wa-direct:hover{
+  background:linear-gradient(135deg,rgba(37,211,102,.18) 0%,rgba(37,211,102,.09) 100%);
+  border-color:rgba(37,211,102,.4);
+  transform:translateY(-2px)
+}
+.form-wa-direct svg{color:#25D366;flex-shrink:0}
+.form-wa-direct-title{font-weight:700;font-size:.92rem;color:var(--white)}
+.form-wa-direct-num{font-size:.78rem;color:var(--muted);margin-top:2px}
+
+/* Contact info list */
+.form-contact-list{
+  display:flex;flex-direction:column;gap:0;margin-bottom:28px
+}
+.form-contact-item{
+  display:flex;align-items:flex-start;gap:12px;
+  padding:14px 0;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  font-size:.82rem;color:var(--muted);line-height:1.5
+}
+.form-contact-item:last-child{border-bottom:none}
+.form-contact-item svg{color:var(--pink);flex-shrink:0;margin-top:1px}
+.form-contact-link{color:var(--silver);text-decoration:none;transition:color .2s}
+.form-contact-link:hover{color:var(--white)}
+
+/* ── Quote ── */
+.form-quote{
+  margin-top:28px;padding:22px 24px;
+  background:linear-gradient(135deg,rgba(242,5,98,.07) 0%,rgba(242,5,98,.02) 100%);
+  border:1px solid rgba(242,5,98,.18);
+  border-left:3px solid var(--pink);
+  border-radius:14px;
+  position:relative;overflow:hidden
+}
+.form-quote::before{
+  content:'\201C';
+  position:absolute;top:-10px;right:16px;
+  font-size:5rem;line-height:1;
+  color:rgba(242,5,98,.12);
+  font-family:'Rajdhani',sans-serif;
+  pointer-events:none
+}
+.form-quote p{
+  font-size:.88rem;color:var(--silver);
+  line-height:1.75;font-style:italic;margin-bottom:12px;
+  position:relative
+}
+.form-quote footer{
+  display:flex;align-items:center;gap:8px;
+  font-size:.68rem;color:var(--pink);
+  font-weight:700;text-transform:uppercase;letter-spacing:.1em
+}
+.form-quote footer::before{
+  content:'';display:block;width:18px;height:1px;background:var(--pink);opacity:.5
+}
+
+/* ── Form card ── */
+.form-card{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,rgba(16,12,22,.98) 0%,rgba(6,4,10,1) 100%);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:18px;
+  padding:36px;
+  display:flex;flex-direction:column;gap:20px;
+  box-shadow:0 40px 100px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.06)
+}
+.form-card-accent{
+  position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--pink) 0%,rgba(242,5,98,.4) 45%,transparent 75%)
+}
+
+/* ── Section dividers ── */
+.fc-group-label{
+  display:flex;align-items:center;gap:10px;
+  font-size:.58rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.22em;color:var(--pink);
+  margin-top:6px
+}
+.fc-group-label::after{
+  content:'';flex:1;height:1px;background:rgba(242,5,98,.15)
+}
+
+/* ── Fields ── */
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ff{display:flex;flex-direction:column;gap:6px}
+.ff-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(201,201,201,.5)}
+.ff-req{color:var(--pink)}
+.ff-error{font-size:.7rem;color:var(--pink);font-weight:600;margin-top:2px}
+.ff-err .fi{border-color:var(--pink)!important;box-shadow:0 0 0 3px rgba(242,5,98,.1)!important}
+
+/* ── Inputs ── */
+.fi{
+  background:rgba(0,0,0,.45);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:10px;
+  color:var(--white);padding:12px 15px;
+  font:inherit;font-size:.9rem;
+  transition:border-color .22s,box-shadow .22s,background .22s;
+  outline:none;width:100%
+}
+.fi::placeholder{color:rgba(255,255,255,.15)}
+.fi:focus{
+  background:rgba(0,0,0,.6);
+  border-color:rgba(242,5,98,.5);
+  box-shadow:0 0 0 3px rgba(242,5,98,.1)
+}
+.fi-textarea{resize:vertical;min-height:92px;line-height:1.7}
+
+/* ── Select ── */
+.fi-select-wrap{position:relative}
+.fi-select-wrap .fi{padding-right:42px;appearance:none;cursor:pointer}
+.fi-select-wrap .fi option{background:#181818;color:var(--white)}
+.fi-select-arrow,
+.fi-select-wrap>svg{
+  position:absolute;right:13px;top:50%;transform:translateY(-50%);
+  pointer-events:none;color:rgba(255,255,255,.25)
+}
+
+/* ── Toggles ── */
+.fi-toggles{display:flex;gap:8px;flex-wrap:wrap}
+.fi-toggle{
+  padding:9px 20px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.1);
+  background:rgba(0,0,0,.3);
+  color:var(--muted);font:inherit;font-size:.83rem;
+  cursor:pointer;transition:all .18s;white-space:nowrap
+}
+.fi-toggle:hover{border-color:rgba(242,5,98,.35);color:var(--white)}
+.fi-toggle.active{
+  background:rgba(242,5,98,.12);
+  border-color:rgba(242,5,98,.45);
+  color:var(--pink);font-weight:600
+}
+
+/* ── Submit / privacy ── */
+.form-submit-btn{
+  width:100%;justify-content:center;
+  margin-top:4px;
+  font-size:1rem;padding:16px 24px;
+  box-shadow:0 8px 32px rgba(242,5,98,.3)
+}
+.form-submit-btn:hover{box-shadow:0 12px 44px rgba(242,5,98,.45)}
+.form-privacy-note{
+  font-size:.67rem;color:rgba(255,255,255,.2);
+  text-align:center;line-height:1.6
+}

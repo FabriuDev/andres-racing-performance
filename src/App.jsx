@@ -1,19 +1,15 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import TrustStrip from './components/TrustStrip'
-import Services from './components/Services'
-import WhatIsDyno from './components/WhatIsDyno'
-import Karting from './components/Karting'
-import Process from './components/Process'
-import AboutTaller from './components/AboutTaller'
-import Differential from './components/Differential'
-import Gallery from './components/Gallery'
-import Testimonials from './components/Testimonials'
-import ContactForm from './components/ContactForm'
-import FAQ from './components/FAQ'
-import Location from './components/Location'
-import Footer from './components/Footer'
-import WAFloat from './components/WAFloat'
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
+import WAFloat from './components/layout/WAFloat'
+import Hero from './components/sections/Hero'
+import Services from './components/sections/Services'
+import Karting from './components/sections/Karting'
+import AboutTaller from './components/sections/AboutTaller'
+import Gallery from './components/sections/Gallery'
+import Testimonials from './components/sections/Testimonials'
+import ContactForm from './components/sections/ContactForm'
+import FAQ from './components/sections/FAQ'
+import Location from './components/sections/Location'
 
 export default function App() {
   return (
@@ -21,13 +17,9 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <TrustStrip />
         <Services />
-        <WhatIsDyno />
         <Karting />
-        <Process />
         <AboutTaller />
-        <Differential />
         <Gallery />
         <Testimonials />
         <ContactForm />

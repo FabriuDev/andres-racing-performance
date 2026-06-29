@@ -1,0 +1,54 @@
+/* ══════════════════════════════════════
+   GALERÍA
+══════════════════════════════════════ */
+.gallery-section{
+  background:linear-gradient(180deg,var(--bg),var(--black-soft) 60%,var(--bg));
+  padding-bottom:80px
+}
+
+/* ── Marquee ── */
+.gal-marquee-wrap{overflow:hidden;padding:4px 0;margin:0 0 0}
+.gal-marquee-row{
+  display:flex;gap:10px;
+  width:max-content;
+  animation:gal-scroll 40s linear infinite
+}
+.gal-marquee-row+.gal-marquee-row{
+  margin-top:10px;
+  animation-direction:reverse;
+  animation-duration:48s
+}
+@keyframes gal-scroll{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+@media(prefers-reduced-motion:reduce){
+  .gal-marquee-row{animation-play-state:paused}
+}
+.gal-marquee-wrap:hover .gal-marquee-row{animation-play-state:paused}
+.gal-mq-item{
+  flex-shrink:0;width:280px;height:175px;
+  border-radius:12px;overflow:hidden;position:relative;
+  border:1px solid rgba(255,255,255,.06)
+}
+.gal-mq-img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .5s ease
+}
+.gal-mq-item:hover .gal-mq-img{transform:scale(1.05)}
+.gal-mq-label{
+  position:absolute;bottom:8px;left:10px;
+  font-family:'Rajdhani',sans-serif;font-weight:700;font-size:.58rem;
+  text-transform:uppercase;letter-spacing:.12em;
+  color:rgba(255,255,255,.9);
+  background:rgba(0,0,0,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  padding:3px 10px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.1);pointer-events:none
+}
+
+/* ── CTA ── */
+.gal-cta{
+  margin-top:44px;display:flex;flex-direction:column;
+  align-items:center;gap:14px;text-align:center
+}
+.gal-cta-text{font-size:.88rem;color:var(--muted);line-height:1.6}

@@ -1,0 +1,147 @@
+/* ══════════════════════════════════════
+   TESTIMONIOS
+══════════════════════════════════════ */
+.test-section{
+  background:linear-gradient(180deg,var(--carbon-2) 0%,var(--black-main) 100%);
+  padding:100px 0 72px
+}
+
+/* ── Rating badge ── */
+.testi-rating-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:999px;padding:8px 20px;margin:0 auto 28px;
+  color:inherit;text-decoration:none;
+  transition:border-color .22s,background .22s
+}
+.testi-rating-badge:hover{
+  border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.06)
+}
+.testi-stars-row{display:flex;align-items:center;gap:2px}
+.testi-rating-num{
+  font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1rem;color:#F59E0B
+}
+.testi-rating-sep{color:var(--text-low)}
+.testi-rating-src{font-size:.72rem;color:var(--text-muted);font-weight:500}
+
+/* ── Carousel wrapper — edge fades via positioned divs, no mask-image ── */
+.testi-carousel-wrap{
+  position:relative;
+  overflow:hidden;
+  padding:20px 0 40px
+}
+.testi-fade{
+  position:absolute;top:0;bottom:0;width:180px;z-index:3;pointer-events:none
+}
+.testi-fade-l{
+  left:0;
+  background:linear-gradient(90deg,var(--black-main) 0%,transparent 100%)
+}
+.testi-fade-r{
+  right:0;
+  background:linear-gradient(-90deg,var(--black-main) 0%,transparent 100%)
+}
+
+/* ── Scrolling track ── */
+@keyframes testi-scroll{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+.testi-track{
+  display:flex;gap:22px;width:max-content;
+  animation:testi-scroll 52s linear infinite;
+  will-change:transform
+}
+.testi-carousel-wrap:hover .testi-track{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){
+  .testi-track{animation-play-state:paused}
+}
+
+/* ── Cards ── */
+.testi-card{
+  flex-shrink:0;width:345px;
+  background:linear-gradient(145deg,#1E1C2A 0%,#15141E 100%);
+  border:1px solid rgba(255,255,255,.09);
+  border-top:2px solid var(--ac);
+  border-radius:18px;
+  padding:24px 26px 22px;
+  display:flex;flex-direction:column;gap:16px;
+  position:relative;
+  box-shadow:0 4px 24px rgba(0,0,0,.35);
+  transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s,border-color .3s;
+  cursor:default
+}
+/* Tinte atmosférico — div real, no pseudo, sin conflictos de compositing */
+.testi-card-tint{
+  position:absolute;inset:0;border-radius:18px;
+  background:radial-gradient(ellipse 140% 100% at 100% 0%,var(--ac),transparent 58%);
+  opacity:.08;pointer-events:none
+}
+.testi-card:hover{
+  transform:translateY(-6px) scale(1.015);
+  border-color:rgba(255,255,255,.18);
+  box-shadow:0 20px 52px rgba(0,0,0,.5)
+}
+.testi-card:hover .testi-card-tint{opacity:.13}
+
+/* ── Top row ── */
+.testi-top-row{
+  display:flex;align-items:center;justify-content:space-between;gap:10px
+}
+.testi-pill{
+  font-family:'Inter',sans-serif;font-size:.57rem;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ac);
+  border:1px solid var(--ac);
+  border-radius:999px;padding:3px 11px;
+  opacity:.88;flex-shrink:1;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis
+}
+.testi-stars{display:flex;align-items:center;gap:2px;flex-shrink:0}
+
+/* ── Quote body ── */
+.testi-text{
+  font-size:.875rem;
+  color:rgba(218,215,228,.86);
+  line-height:1.88;flex:1;margin:0
+}
+
+/* ── Footer — DIV, no semántica footer (evita regla global footer{background}) ── */
+.testi-foot{
+  display:flex;align-items:center;gap:12px;
+  padding-top:16px;
+  border-top:1px solid rgba(255,255,255,.07)
+}
+.testi-avatar{
+  width:38px;height:38px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Rajdhani',sans-serif;font-weight:700;font-size:.88rem;
+  color:#fff;letter-spacing:.02em;
+  background:var(--ac);
+  border:2px solid rgba(255,255,255,.2)
+}
+.testi-info{flex:1;min-width:0}
+.testi-name{
+  font-weight:700;font-size:.875rem;
+  color:var(--text-main);line-height:1.2
+}
+.testi-loc{font-size:.68rem;color:var(--text-muted);margin-top:2px}
+
+/* ── Bottom ── */
+.testi-bottom{
+  display:flex;justify-content:center;margin-top:40px
+}
+.testi-google-link{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:.8rem;font-weight:600;color:var(--text-muted);
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:999px;padding:9px 22px;
+  transition:color .22s,border-color .22s,background .22s
+}
+.testi-google-link:hover{
+  color:var(--text-main);
+  border-color:rgba(255,255,255,.2);
+  background:rgba(255,255,255,.04)
+}

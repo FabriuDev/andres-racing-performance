@@ -3,8 +3,8 @@
  * When all fallbacks are exhausted, hides the parent wrapper element.
  *
  * Usage:
- *   <img src="/img/primary.jpg" onError={imgFallback('/img/fallback.png')} />
- *   <img src="/img/primary.jpg" onError={imgFallback('/img/fb1.jpg', '/img/fb2.png')} />
+ *   <img src="/img/primary.jpg" onError={imgFallback('/img/fallback.webp')} />
+ *   <img src="/img/primary.jpg" onError={imgFallback('/img/fb1.jpg', '/img/fb2.webp')} />
  *   <img src="/img/primary.jpg" onError={imgFallback()} />  // hide immediately on error
  */
 export const imgFallback = (...fallbacks) => (e) => {

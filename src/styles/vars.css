@@ -1,0 +1,59 @@
+/* ══════════════════════════════════════
+   VARIABLES
+══════════════════════════════════════ */
+:root {
+  /* Fondo principal */
+  --black-main: #050505;
+  --black-soft: #0A0A0C;
+  --black-deep: #020203;
+
+  /* Superficies / cards */
+  --carbon-1:  #101014;
+  --carbon-2:  #15151A;
+  --carbon-3:  #1C1C22;
+
+  /* Fucsia racing */
+  --pink-main: #F20562;
+  --pink-hover:#FF0A70;
+  --pink-dark: #B80449;
+  --pink-soft: rgba(242,5,98,0.14);
+  --pink-glow: rgba(242,5,98,0.28);
+
+  /* Gris metálico */
+  --metal-dark: #2A292D;
+  --metal-mid:  #6F6A72;
+  --metal-light:#C8C4BE;
+
+  /* Textos */
+  --text-main: #F2F0EC;
+  --text-soft: #D8D4CE;
+  --text-muted:#A7A3A0;
+  --text-low:  #706C68;
+
+  /* Bordes */
+  --border-soft:  rgba(255,255,255,0.08);
+  --border-strong:rgba(255,255,255,0.14);
+  --border-pink:  rgba(242,5,98,0.36);
+
+  /* WhatsApp */
+  --whatsapp:      #22C55E;
+  --whatsapp-hover:#16A34A;
+
+  /* Aliases legacy (todo el CSS existente sigue funcionando) */
+  --bg:       var(--black-main);
+  --card:     var(--carbon-1);
+  --card2:    var(--carbon-2);
+  --pink:     var(--pink-main);
+  --pink-dim: var(--pink-soft);
+  --white:    var(--text-main);
+  --silver:   var(--metal-light);
+  --muted:    var(--text-muted);
+  --faint:    var(--text-low);
+  --border:   var(--carbon-3);
+  --border-p: var(--border-pink);
+  --gold:     #C79B2C;
+  --shadow:   0 24px 64px rgba(0,0,0,0.90);
+  --shadow-sm:0 4px 20px rgba(0,0,0,0.70);
+  --r:        0px;
+  --rl:       2px;
+}

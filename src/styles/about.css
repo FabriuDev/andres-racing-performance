@@ -1,0 +1,132 @@
+/* ══════════════════════════════════════
+   SOBRE EL TALLER
+══════════════════════════════════════ */
+.about-section{background:linear-gradient(180deg,var(--bg),var(--carbon-2) 55%,var(--black-main))}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+
+/* ── Stats bar ── */
+.about-stats{
+  display:flex;margin:24px 0;
+  border:1px solid var(--border-soft);border-radius:var(--r);
+  overflow:hidden;background:var(--carbon-1)
+}
+.about-stat{
+  flex:1;padding:14px 16px;text-align:center;
+  border-right:1px solid var(--border-soft);
+  opacity:0;transform:translateY(8px);
+  transition:opacity .4s ease,transform .4s ease;
+  transition-delay:calc(var(--si,0) * 80ms)
+}
+.about-stat:last-child{border-right:none}
+.reveal.revealed .about-stat{opacity:1;transform:none}
+.about-stat-num{
+  display:block;font-family:'Rajdhani',sans-serif;font-size:1.15rem;font-weight:800;
+  color:var(--pink);line-height:1;margin-bottom:4px
+}
+.about-stat-label{font-size:.64rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em}
+
+/* ── Body text ── */
+.about-body{font-size:.9rem;color:var(--text-muted);line-height:1.75;margin:0 0 20px}
+
+/* ── Pillar list ── */
+.about-pillars{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-direction:column;gap:8px}
+.about-pillar{
+  display:flex;align-items:center;gap:14px;
+  padding:11px 16px;
+  border-left:2px solid rgba(232,0,92,.3);
+  background:linear-gradient(90deg,rgba(232,0,92,.05) 0%,transparent 60%);
+  border-radius:0 var(--r) var(--r) 0;
+  opacity:0;transform:translateX(-12px);
+  transition:opacity .5s ease,transform .5s ease,border-color .25s;
+  transition-delay:calc(var(--i,0) * 100ms)
+}
+.reveal.revealed .about-pillar{opacity:1;transform:none}
+.about-pillar:hover{border-color:var(--pink)}
+.about-pillar-n{
+  font-family:'Rajdhani',sans-serif;font-size:.95rem;font-weight:800;
+  color:var(--pink);opacity:.6;flex-shrink:0;min-width:20px;line-height:1
+}
+.about-pillar-title{font-weight:700;color:var(--text-main);font-size:.87rem}
+.about-pillar-sub{color:var(--text-muted);font-size:.87rem}
+.about-cta{margin-top:28px;display:inline-flex;align-items:center;gap:8px}
+
+/* ── Visual / Photo ── */
+.about-visual{position:relative}
+.about-photo{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--rl);
+  aspect-ratio:4/5;position:relative;overflow:hidden
+}
+.about-photo-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(6,6,6,.92) 0%,rgba(6,6,6,.12) 50%,transparent 100%);
+  pointer-events:none
+}
+.about-photo-panel{
+  position:absolute;bottom:0;left:0;right:0;padding:22px 24px;
+}
+.about-photo-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;
+  color:var(--silver);margin-bottom:8px
+}
+.about-photo-dot{
+  width:7px;height:7px;border-radius:50%;background:var(--pink);
+  box-shadow:0 0 8px var(--pink);flex-shrink:0;
+  animation:pulse 2.2s ease-in-out infinite
+}
+.about-photo-name{
+  font-family:'Rajdhani',sans-serif;font-size:1.05rem;font-weight:800;
+  text-transform:uppercase;letter-spacing:.08em;color:var(--white)
+}
+
+/* ══════════════════════════════════════
+   ABOUT PHOTO — FOTO REAL
+══════════════════════════════════════ */
+.about-photo-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center center;border-radius:var(--rl);
+  transition:transform 6s ease
+}
+.about-photo:hover .about-photo-img{transform:scale(1.04)}
+
+/* Nuevo layout visual About: foto Andrés (grande) + foto taller (pequeña) */
+.about-owner-photo{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--rl);
+  aspect-ratio:3/4;position:relative;overflow:hidden;margin-bottom:12px
+}
+.about-owner-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center top;
+  transition:transform 6s ease
+}
+.about-owner-photo:hover .about-owner-img{transform:scale(1.04)}
+.about-photo-role{
+  font-size:.68rem;color:var(--muted);margin-top:2px;
+  text-transform:uppercase;letter-spacing:.08em
+}
+.about-taller-photo{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--rl);
+  aspect-ratio:16/7;position:relative;overflow:hidden
+}
+.about-taller-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center center;
+  transition:transform 6s ease
+}
+.about-taller-photo:hover .about-taller-img{transform:scale(1.03)}
+
+/* ══════════════════════════════════════
+   ABOUT — QUOTE
+══════════════════════════════════════ */
+.about-quote{
+  margin-top:28px;padding:18px 22px;
+  border-left:3px solid var(--pink);background:var(--pink-dim);
+  border-radius:0 var(--r) var(--r) 0
+}
+.about-quote p{
+  font-size:.9rem;color:var(--silver);line-height:1.7;font-style:italic;margin:0 0 8px
+}
+.about-quote-author{
+  font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;
+  color:var(--pink);font-style:normal
+}

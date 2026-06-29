@@ -1,0 +1,75 @@
+/* ══════════════════════════════════════
+   TRUST STRIP
+══════════════════════════════════════ */
+.trust-strip{
+  background:linear-gradient(180deg,var(--black-soft),var(--black-main));
+  border-top:1px solid var(--border-soft);
+  border-bottom:1px solid var(--border-soft);
+  padding:36px 0;position:relative;overflow:hidden
+}
+.trust-strip-accent{
+  position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:480px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(242,5,98,.4),transparent);
+  pointer-events:none
+}
+.trust-pill-row{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px
+}
+.trust-pill{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:9px 18px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:999px;
+  font-size:.82rem;font-weight:600;color:var(--silver);
+  white-space:nowrap;
+  transition:background .2s,border-color .2s,color .2s
+}
+.trust-pill svg{color:var(--pink);flex-shrink:0}
+.trust-pill:hover{
+  background:rgba(242,5,98,.08);
+  border-color:rgba(242,5,98,.25);
+  color:var(--white)
+}
+
+/* ══════════════════════════════════════
+   CÓMO CUIDAMOS — PILARES DE CONFIANZA
+══════════════════════════════════════ */
+.trust-pillars-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:0
+}
+.trust-pillar-card{
+  background:linear-gradient(160deg,var(--carbon-2) 0%,var(--carbon-1) 100%);
+  border:1px solid var(--border-soft);border-radius:var(--r);
+  padding:28px 22px;
+  box-shadow:0 2px 14px rgba(0,0,0,.2),inset 0 1px 0 rgba(255,255,255,.04);
+  transition:border-color .3s,transform .28s,box-shadow .3s
+}
+.trust-pillar-card:hover{
+  border-color:var(--border-pink);transform:translateY(-4px);
+  box-shadow:0 16px 44px rgba(0,0,0,.38)
+}
+.trust-pillar-icon{
+  width:48px;height:48px;background:var(--pink-dim);border:1px solid var(--border-p);
+  border-radius:14px;display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;margin-bottom:16px
+}
+.trust-pillar-title{
+  font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1rem;
+  text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px
+}
+.trust-pillar-desc{font-size:.83rem;color:var(--muted);line-height:1.65}
+
+/* ══════════════════════════════════════
+   TRUST STRIP — 4-COLUMN VARIANT
+══════════════════════════════════════ */
+.trust-grid-4{grid-template-columns:repeat(4,1fr)}
+.trust-item-v{
+  flex-direction:column;align-items:flex-start;gap:10px;
+  padding:20px 24px
+}
+.trust-item-title{
+  font-size:.82rem;font-weight:700;color:var(--white);
+  margin-bottom:2px
+}

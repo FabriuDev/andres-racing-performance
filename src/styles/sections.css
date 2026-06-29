@@ -1,0 +1,112 @@
+/* ══════════════════════════════════════
+   ¿PARA QUIÉN?
+══════════════════════════════════════ */
+.forwhom-section{background:linear-gradient(180deg,var(--carbon-2),var(--black-main))}
+.forwhom-section .s-head{text-align:center}
+.forwhom-section .s-head .s-sub{margin:0 auto;text-align:center}
+.fw-checklist{display:flex;flex-direction:column;gap:12px;max-width:760px;margin:0 auto}
+.fw-check-item{
+  display:flex;align-items:flex-start;gap:16px;
+  padding:16px 0;
+  background:transparent;
+  border:none;border-bottom:1px solid var(--border-soft);border-radius:0;
+  transition:border-color .25s,transform .25s
+}
+.fw-check-item:last-child{border-bottom:none}
+.fw-check-item:hover{
+  border-color:var(--border-pink);transform:translateX(4px)
+}
+.fw-check-icon{
+  width:26px;height:26px;background:var(--pink-dim);border:1px solid var(--border-p);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:.78rem;font-weight:700;color:var(--pink);flex-shrink:0;margin-top:1px
+}
+.fw-check-text{font-size:.92rem;line-height:1.6;color:var(--silver)}
+
+/* ══════════════════════════════════════
+   DIFERENCIAL
+══════════════════════════════════════ */
+.diff-section{background:linear-gradient(180deg,var(--bg),var(--carbon-2) 55%,var(--black-main))}
+.diff-section .s-head{text-align:center}
+.diff-section .s-head .s-sub{margin:0 auto;text-align:center}
+.diff-list{
+  display:grid;grid-template-columns:1fr 1fr;gap:0 48px;
+  list-style:none;margin:40px auto 0;max-width:780px
+}
+.diff-item{
+  display:flex;align-items:flex-start;gap:10px;font-size:.88rem;line-height:1.5;
+  padding:14px 0;border-bottom:1px solid var(--border-soft);
+  opacity:0;transform:translateY(12px);transition:opacity .4s ease,transform .4s ease;
+  transition-delay:calc(var(--di,.15s) * .08s)
+}
+.diff-list.revealed .diff-item{opacity:1;transform:none}
+.diff-check{
+  width:18px;height:18px;border-radius:50%;flex-shrink:0;
+  background:rgba(232,0,92,.12);border:1.5px solid var(--pink);
+  display:flex;align-items:center;justify-content:center;margin-top:2px
+}
+.diff-check::after{content:'✓';font-size:.6rem;color:var(--pink);font-weight:700}
+.diff-title{font-weight:700;color:var(--text-main)}
+.diff-sub{color:var(--text-muted);font-weight:400}
+.diff-cta{display:flex;justify-content:center;margin-top:44px}
+
+/* ══════════════════════════════════════
+   QUÉ PROBLEMAS RESOLVEMOS
+══════════════════════════════════════ */
+.problems-section{background:linear-gradient(180deg,var(--carbon-2),var(--black-main))}
+.problems-section .s-head{text-align:center}
+.problems-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px
+}
+.problem-card{
+  background:linear-gradient(160deg,var(--carbon-2) 0%,var(--carbon-1) 100%);
+  border:1px solid var(--border-soft);border-radius:var(--r);
+  padding:24px 20px;
+  box-shadow:0 2px 12px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.035);
+  transition:border-color .3s,transform .28s,box-shadow .3s
+}
+.problem-card:hover{
+  border-color:var(--border-pink);transform:translateY(-3px);
+  box-shadow:0 14px 40px rgba(0,0,0,.36)
+}
+.problem-icon{margin-bottom:10px;color:var(--pink);display:flex;align-items:center}
+.problem-title{font-weight:700;font-size:.92rem;margin-bottom:6px}
+.problem-desc{font-size:.82rem;color:var(--muted);line-height:1.6}
+.problems-cta{
+  margin-top:40px;text-align:center;
+  padding:28px 24px;border:1px solid var(--border-p);
+  border-radius:var(--r);background:var(--pink-dim);
+  display:flex;flex-direction:column;align-items:center;gap:20px
+}
+.problems-cta-text{
+  font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.05rem;
+  text-transform:uppercase;letter-spacing:.12em;color:var(--pink);line-height:1.8
+}
+
+/* Stagger problems */
+.problems-grid .problem-card{opacity:0}
+.problems-grid.revealed .problem-card{animation:fade-up .52s ease both}
+.problems-grid.revealed .problem-card:nth-child(1){animation-delay:0ms}
+.problems-grid.revealed .problem-card:nth-child(2){animation-delay:70ms}
+.problems-grid.revealed .problem-card:nth-child(3){animation-delay:140ms}
+.problems-grid.revealed .problem-card:nth-child(4){animation-delay:210ms}
+.problems-grid.revealed .problem-card:nth-child(5){animation-delay:280ms}
+.problems-grid.revealed .problem-card:nth-child(6){animation-delay:350ms}
+
+/* ══════════════════════════════════════
+   CTA FINAL
+══════════════════════════════════════ */
+.cta-section{
+  text-align:center;padding:110px 0;
+  background:linear-gradient(160deg,#110008,var(--bg) 65%);
+  border-top:1px solid var(--border-p);position:relative;overflow:hidden
+}
+.cta-section::before{
+  content:'';position:absolute;top:-220px;left:50%;transform:translateX(-50%);
+  width:min(700px,100vw);height:700px;border-radius:50%;
+  background:radial-gradient(circle,rgba(242,5,98,.08) 0%,transparent 65%);pointer-events:none
+}
+.cta-section .s-title{font-size:clamp(2.2rem,4.5vw,3.8rem);max-width:16ch;margin:14px auto 16px}
+.cta-section .s-sub{margin:0 auto 40px;text-align:center}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cta-note{margin-top:18px;font-size:.77rem;color:var(--faint)}
